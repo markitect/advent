@@ -60,9 +60,9 @@ namespace Day2
             foreach (var entry in entryList)
             {
 
-                if (entry.min < entry.password.Length && entry.max < entry.password.Length)
+                if (entry.min-1 < entry.password.Length && entry.max-1 < entry.password.Length)
                 {
-                    if (entry.password[entry.min] == entry.letter ^ entry.password[entry.max] == entry.letter)
+                    if (entry.password[entry.min-1] == entry.letter ^ entry.password[entry.max-1] == entry.letter)
                     {
                         validCount++;
                     }
